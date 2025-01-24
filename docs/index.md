@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-Source code: [https://github.com/avinashduggal/J.A.R.V.I.S.](jarvis.html)
+Source code: [https://github.com/avinashduggal/J.A.R.V.I.S.](https://github.com/avinashduggal/J.A.R.V.I.S.)
 
 Reports:
 
