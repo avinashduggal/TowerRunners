@@ -22,7 +22,7 @@ We are planning to use reinforcement learning for this project. Some rewards we 
 The harvest is successful if it has the entire variety of crops in its inventory. 
 
 ## Meet the Instructor
-
+The earliest date the team plans to meet with the instructor is January 28th.
 
 ## AI Tool Usage
 At the moment of this proposal creation, we currently do not know if we will use AI tools, and in the event we do, we do not know which AI Tools we shall utilize.
