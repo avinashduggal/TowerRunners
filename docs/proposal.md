@@ -17,6 +17,9 @@ We are planning to use reinforcement learning for this project. Some rewards we 
 - -1 points if broke crop prematurely
 - -.5 points if did not pick up the crop droppings
 - -.5 if did not replant the crop
+- -2 points if non-crop block is broken
+
+The harvest is successful if it has the entire variety of crops in its inventory. 
 
 ## Meet the Instructor
 
