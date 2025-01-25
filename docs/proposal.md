@@ -19,7 +19,9 @@ We are planning to use reinforcement learning for this project. Some rewards we 
 - -.5 if did not replant the crop
 - -2 points if non-crop block is broken
 
-The harvest is successful if it has the entire variety of crops in its inventory. 
+The harvest is successful if it has the entire variety of crops in its inventory.
+
+Some ways that we'll be evaluating our agent is the replanting success rate which is the proportion of blocks with crops on them. If there are blocks without crops on them, this indicates the agent harvested a crop and unsuccessfully replanted them. Another source of evaluation is harvesting success rate, which is the proportion of blocks that the agent broke which were crops. A potential baseline that we'll be using is a random action policy to compare the quantitivate values between the agents. We expect the the RL agent to improve by 30% compared to the baseline. 
 
 ## Meet the Instructor
 The earliest date the team plans to meet with the instructor is January 28th.
