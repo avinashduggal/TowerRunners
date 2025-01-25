@@ -21,10 +21,12 @@ We are planning to use reinforcement learning for this project. Some rewards we 
 
 The harvest is successful if it has the entire variety of crops in its inventory.
 
-Some ways that we'll be evaluating our agent is the replanting success rate which is the proportion of blocks with crops on them. If there are blocks without crops on them, this indicates the agent harvested a crop and unsuccessfully replanted them. Another source of evaluation is harvesting success rate, which is the proportion of blocks that the agent broke which were crops. A potential baseline that we'll be using is a random action policy to compare the quantitivate values between the agents. We expect the the RL agent to improve by 30% compared to the baseline. 
+For quantitative evalutions, we'll be looking at our agent's replanting success rate which is the proportion of blocks with crops on them. If there are blocks without crops on them, this indicates the agent harvested a crop and unsuccessfully replanted them. Another source of evaluation is harvesting success rate, which is the proportion of blocks that the agent broke which were crops. A potential baseline that we'll be using is a random action policy to compare the quantitivate values between the agents. We expect the the RL agent to improve by 30% compared to the baseline. 
+
+For qualitative evaluations, we want to check if the agent is able to distinguish between fully grown crops or partially grown crops to ensure that it's not making simple mistakes. One thing we can do is to have a field that has a crops at different harvesting levels. We're also looking into checking whether the agent is adhering to the objectives and targeting only crops (not other blocks) by using a heatmap. I would also set up the field so there are some sparsity between crops to see if the agent is wandering around until it detects crops.
 
 ## Meet the Instructor
 The earliest date the team plans to meet with the instructor is January 28th.
 
 ## AI Tool Usage
-At the moment of this proposal creation, we currently do not know if we will use AI tools, and in the event we do, we do not know which AI Tools we shall utilize.
+At the moment of this proposal creation, we currently do not know if we will use AI tools, and in the event we do, we do not know which AI Tools we shall utilize. Though one AI tool we might use is ChatGPT to ask it also the feasibility of our current approaches which should help us determine a solution.
