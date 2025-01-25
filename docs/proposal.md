@@ -10,7 +10,13 @@ The goal of this project is to develop an AI agent in Minecraft that can automat
 An algorithm that the team anticipates on using for our project is Q-learning that uses a model free approach for traing the agent to maximize crops harvested.
 
 ## Evaluation Plan
-
+We are planning to use reinforcement learning for this project. Some rewards we have thought of are:
+- +1 points if broke a fully grown crop
+- +.5 points if did pick up the crop droppings from the ground
+- +.5 points if replanted the crop
+- -1 points if broke crop prematurely
+- -.5 points if did not pick up the crop droppings
+- -.5 if did not replant the crop
 
 ## Meet the Instructor
 
