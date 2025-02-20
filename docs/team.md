@@ -3,14 +3,17 @@ layout: default
 title:  Team
 ---
 
-# {{ page.title }}
+# Meet the Team
+Welcome to the JARVIS project! We’re a group of passionate AI enthusiasts tackling the Obstacle Tower challenge with reinforcement learning. Meet the minds behind the mission:
 
-
-## USER 1
+### Competitor 1
+Avinash / Avi
 ***UCI Net ID***: avinashd
 
-## USER 2
+### Competitor 2
+Patrick / Patrick
 ***UCI Net ID***: wongp5
 
-## USER 3
+### Competitor 3
+Dongju Kim / Jude
 ***UCI Net ID***: dongjuk3

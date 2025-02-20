@@ -3,38 +3,12 @@ layout: default
 title:  Home
 ---
 
-Source code: [https://github.com/avinashduggal/J.A.R.V.I.S.](https://github.com/avinashduggal/J.A.R.V.I.S.)
+## Team J.A.R.V.I.S.
+The team J.A.R.V.I.S. focuses on solving the Obstacle Tower challenge using machine learning. Obstacle Tower is a procedurally generated environment designed to evaluate an AI agent's ability to generalize across multiple tasks such as vision, locomotion, planning, and puzzle-solving. The agent's goal is to navigate through increasingly complex floors, adapting to new obstacles and challenges. Our aim is to develop a reinforcement learning-based solution capable of learning effective strategies to improve performance across different tower configurations.
 
-Reports:
-
+*Reports*:
 - [Proposal](proposal.html)
 - [Status](status.html)
 - [Final](final.html)
 
-What's Markdown (`.md`)?
-
-Markdown is markup that lets you write hypertext (HTML) documents
-in easy-to-read and easy-to-write plain text.
-No angle brackets `<></>` required for
-paragraphs, lists, blockquotes, tables, etc.
-
-
-This is a paragraph (in Markdown). Some more
-text here.
-
-This is another paragraph.
-
-This is a list:
-
-- Orange
-- Apple
-- Blueberry
-
-$$x^2 = y^2$$
-
-
-Just getting started with Markdown?
-See the [HTML <-> Markdown Quick Reference (Cheat Sheet)][quickref].
-
-
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
+*Source code*: [https://github.com/avinashduggal/J.A.R.V.I.S.](https://github.com/avinashduggal/J.A.R.V.I.S.)
