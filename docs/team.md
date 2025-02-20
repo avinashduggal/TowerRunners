@@ -8,12 +8,15 @@ Welcome to the JARVIS project! We’re a group of passionate AI enthusiasts tack
 
 ### Competitor 1
 Avinash / Avi
+
 ***UCI Net ID***: avinashd
 
 ### Competitor 2
 Patrick / Patrick
+
 ***UCI Net ID***: wongp5
 
 ### Competitor 3
 Dongju Kim / Jude
+
 ***UCI Net ID***: dongjuk3

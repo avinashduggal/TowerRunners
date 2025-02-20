@@ -7,16 +7,20 @@ Our project, JARVIS, focuses on solving the Obstacle Tower challenge using machi
 
 ## Approach
 We employ reinforcement learning (RL), leveraging deep learning architectures to train an agent capable of navigating the Obstacle Tower environment. Our methodology consists of the following key components:
-*Environment Setup*: We integrate the official Gym interface of Obstacle Tower, ensuring compatibility with reinforcement learning frameworks like Stable Baselines3 and RLlib.
-*Model Selection*:
+
+**Environment Setup**: We integrate the official Gym interface of Obstacle Tower, ensuring compatibility with reinforcement learning frameworks like Stable Baselines3 and RLlib.
+
+**Model Selection**:
 - Deep Q-Networks (DQN): Used for early-stage learning, particularly for discrete action spaces.
 - Proximal Policy Optimization (PPO): Our primary algorithm, as PPO is well-suited for environments with continuous and discrete action spaces.
 - A3C (Asynchronous Advantage Actor-Critic): Experimented for multi-threaded training.
-*Training Process*:
+
+**Training Process**:
 We define states as the RGB image observations and actions as discrete movement choices (e.g., move forward, jump, rotate, etc.).
 The reward function incentivizes progression to new floors while penalizing unnecessary movements or collisions.
 We train the agent using a curriculum approach, increasing the difficulty gradually.
-*Hyperparameter Tuning*:
+
+**Hyperparameter Tuning**:
 
 ## Evaluation
 Our evaluation consists of quantitative and qualitative metrics:
