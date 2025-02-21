@@ -18,7 +18,7 @@ if __name__ == "__main__":
     eval_seeds = [1001, 1002, 1003, 1004, 1005]
 
     # Create the ObstacleTowerEnv gym and launch ObstacleTower
-    env = ObstacleTowerEnv("./ObstacleTower/obstacletower")
+    env = ObstacleTowerEnv("../ObstacleTower/obstacletower")
 
     # Wrap the environment with the ObstacleTowerEvaluation wrapper
     # and provide evaluation seeds.
