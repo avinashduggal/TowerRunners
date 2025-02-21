@@ -4,7 +4,7 @@ title:  Team
 ---
 
 # Meet the Team
-Welcome to the JARVIS project! We’re a group of passionate AI enthusiasts tackling the Obstacle Tower challenge with reinforcement learning. Meet the minds behind the mission:
+Welcome to the Tower Runners project! We’re a group of passionate AI enthusiasts tackling the Obstacle Tower challenge with reinforcement learning. Meet the minds behind the mission:
 
 ### Competitor 1
 Avinash / Avi
