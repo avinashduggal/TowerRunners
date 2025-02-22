@@ -67,11 +67,10 @@ We plot performance graphs to illustrate the learning curve of different RL mode
 - Since the code base for Obstacle Towers was deprecated, we struggled alot with version conflicts when installing dependencies. We had to look at the official documentation for various packages like stable-baselines3, numpy, mlagents, etc. to see which versions were compatible with one another. 
   
 - To help with the agent's task of differentiating between the colors of the doors to climb the floors, we did research on how to incoporate computer vision to train our model. Eventually, we found a model that uses a convolutional neural network on PyTorch called ResNet. As a team, we weren't familiar with computer vision or CNN, so we utilized ChatGPT to guide us through the process.
-
-## Video Summary
-
-## Resources Used
+  
 - [Obstacle Tower GitHub Repository](https://github.com/Unity-Technologies/obstacle-tower-env)
 - [Obstacle Tower: A Generalization Challenge in Vision, Control, and Planning](https://arxiv.org/abs/1902.01378)
 - [PPO Dash: Improving Generalization in Deep Reinforcement Learning](https://arxiv.org/abs/1907.06704)
 - [Trying to navigate in the Obstacle Tower environment with Reinforcement Learning](https://smartcat.io/tech-blog/data-science/trying-to-navigate-in-the-obstacle-tower-environment-with-reinforcement-learning/)
+  
+## Video Summary
