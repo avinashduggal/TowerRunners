@@ -4,7 +4,6 @@ title: Status
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/icrvvXN5Vi0?si=kRrAqUXKMrOgvkbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-[![Watch the Video](https://img.youtube.com/vi/icrvvXN5Vi0/maxresdefault.jpg)](https://www.youtube.com/watch?v=icrvvXN5Vi0)
 
 ## Project Summary
 Our project, Tower Runners, focuses on solving the Obstacle Tower challenge using machine learning. Obstacle Tower is a procedurally generated environment designed to evaluate an AI agent's ability to generalize across multiple tasks such as vision, locomotion, planning, and puzzle-solving. The agent's goal is to navigate through increasingly complex floors, adapting to new obstacles and challenges. Our aim is to develop a reinforcement learning-based solution capable of learning effective strategies to improve performance across different tower configurations.
