@@ -61,6 +61,13 @@ We plot performance graphs to illustrate the learning curve of different RL mode
 
 - Computational Constraints: Reinforcement learning requires significant training time, so optimizing resources is crucial.
 
+### Resources Used
+- In the early stages of development, we read the Unity documentation for Obstacle Towers on the public repository to help us set up the environment.
+  
+- Since the code base for Obstacle Towers was deprecated, we struggled alot with version conflicts when installing dependencies. We had to look at the official documentation for various packages like stable-baselines3, numpy, mlagents, etc. to see which versions were compatible with one another. 
+  
+- To help with the agent's task of differentiating between the colors of the doors to climb the floors, we did research on how to incoporate computer vision to train our model. Eventually, we found a model that uses a convolutional neural network on PyTorch called ResNet. As a team, we weren't familiar with computer vision or CNN, so we utilized ChatGPT to guide us through the process.
+
 ## Video Summary
 
 ## Resources Used
