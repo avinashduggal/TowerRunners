@@ -3,8 +3,6 @@ layout: default
 title: Status
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/icrvvXN5Vi0?si=kRrAqUXKMrOgvkbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Project Summary
 Our project, Tower Runners, focuses on solving the Obstacle Tower challenge using machine learning. Obstacle Tower is a procedurally generated environment designed to evaluate an AI agent's ability to generalize across multiple tasks such as vision, locomotion, planning, and puzzle-solving. The agent's goal is to navigate through increasingly complex floors, adapting to new obstacles and challenges. Our aim is to develop a reinforcement learning-based solution capable of learning effective strategies to improve performance across different tower configurations.
 
@@ -38,7 +36,7 @@ Episode Length: Tracks how efficiently the agent solves a level.
 Generalization Performance: Tested by training on seeds/towers and evaluating on unseen ones.
 
 ### Qualitative Analysis
-Our agent in all different algorithms often struggles to make it past the first floor. It is jumping in every direction and many times get's stuck in corners or loops. This is something that needs to be directly addressed and has been our biggest issue. In all of our runs, the agent has yet to reach the second floor , 
+Our agent in all different algorithms often struggles to make it past the first floor. It is jumping in every direction and many times get's stuck in corners or loops. This is something that needs to be directly addressed and has been our biggest issue. In all of our runs, the agent has yet to reach the second floor due to it's difficulty in navigating the environment.
 
 Visualization of Agent Behavior: Screenshots and videos show how the agent learns better strategies over time.
 
@@ -77,3 +75,5 @@ We plot performance graphs to illustrate the learning curve of different RL mode
 - [Trying to navigate in the Obstacle Tower environment with Reinforcement Learning](https://smartcat.io/tech-blog/data-science/trying-to-navigate-in-the-obstacle-tower-environment-with-reinforcement-learning/)
   
 ## Video Summary
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/icrvvXN5Vi0?si=kRrAqUXKMrOgvkbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
