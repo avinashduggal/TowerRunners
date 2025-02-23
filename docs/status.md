@@ -33,12 +33,19 @@ Episode Length: Tracks how efficiently the agent solves a level.
 
 Generalization Performance: Tested by training on seeds/towers and evaluating on unseen ones.
 
-In order to measure the performance of our RL agent using the Proximal Policy Optimization model, we ran several training sessions and recorded the average reward that it accumulated over time. Below, we've included the plot of one model that used the Multi-layer Perception policy, and the second model that used a residual network (Convolution Neural Network) policy. Before performing analysis of the models that we trained, we hoped the average reward accumulated by the agent using the residual network would've outperformed the agent that didn't. So the next thing we have to explore is how to fine-tune this portion of our model so the agent can fully utilize feature detection of the symbols and colors on the doors of various levels. Overall, we believe there's more to be understood about the affects of the hyperparameters e.g. learning rate, gamma (far-sightedness), batch size, and so on because our model was having trouble making progress by moving through the doors. We also need to increase the number of timesteps to train the models even longer.
+In order to measure the performance of our RL agent using the Proximal Policy Optimization model, we ran several training sessions and recorded the average reward that it accumulated over time. Below, we've included the plot of one model that used the Multi-layer Perception policy, and the second model that used a residual network (Convolution Neural Network) policy. Before performing analysis of the models that we trained, we hoped the average reward accumulated by the agent using the residual network would've outperformed the agent that didn't. The original model that's barebones using only PPO obtained higher mean rewards and it also increased throughout it's training process. So the next thing we have to explore is how to fine-tune this portion of our model so the agent can fully utilize feature detection of the symbols and colors on the doors of various levels. Overall, we believe there's more to be understood about the affects of the hyperparameters e.g. learning rate, gamma (far-sightedness), batch size, and so on because our model was having trouble making progress by moving through the doors. We also need to increase the number of timesteps to train the models even longer.
 
 ![MLP and CNN Policy Models](https://github.com/user-attachments/assets/a51570ce-e213-4a55-89cd-79edc50da0e9)
 
 ### Qualitative Analysis
-Our agent in all different algorithms often struggles to make it past the first floor. It is jumping in every direction and many times get's stuck in corners or loops. This is something that needs to be directly addressed and has been our biggest issue. In all of our runs, the agent has yet to reach the second floor due to it's difficulty in navigating the environment.
+
+Among the different models that we trained using the algorithms that we've described, it often struggles with making past the first floor. Even compared to the model that use a random policy, our agent is continuously jumping in every direction and walks around in loops within a section of the room. This is a major concern that we have and it will be immediately addressed. In all the runs, the agent hasn't been able to reach the second floor because of the difficulty in navigating in the environment and making actions that prevents it from being stuck.
+
+![example_agent_stuck](https://github.com/user-attachments/assets/b1058ff1-7f42-45dc-a706-5558fa6e8fc3)
+
+There are occasions where the agent paths towards the door but doesn't fully go through and is walking back and forth. While we were experimenting with our methods, we were hoping the agent would consistently make its way to the doors, but it's repeated the same mistakes. After some period of time the agent even walks away from the door and ends up in the opposite side of the room. 
+
+![example_agent_paths_to_door](https://github.com/user-attachments/assets/08b7196a-4a1d-41c0-b2a0-7c530c1a41f1)
 
 Visualization of Agent Behavior: Screenshots and videos show how the agent learns better strategies over time.
 
