@@ -27,13 +27,15 @@ We are able to run and test different algorithms in our model to see how they pe
 ### Quantitative Metrics
 For quantitative metrics, we evaluated our project observing the ep_rew_mean collected in our training, and the average floors climbed and rewards for testing the classifiers. In the training phase, the rewards, length, and time spent per iteration are saved into a CSV file, and you can observe that as time goes on and more iterations are completed, each of the different RL algorithms becomes more successful by displaying higher rewards, obviously at different rates. Another observation we have made is that when the reward increases, so does the length of the episode. This is because going to the next floor gives you additional time, hence increasing the length of the episode.
 
-Success Rate: Percentage of times the agent successfully reaches a new floor.
-
 Average Episode Reward: Measures learning improvement over time.
 
 Episode Length: Tracks how efficiently the agent solves a level.
 
 Generalization Performance: Tested by training on seeds/towers and evaluating on unseen ones.
+
+In order to measure the performance of our RL agent using the Proximal Policy Optimization model, we ran several training sessions and recorded the average reward that it accumulated over time. Below, we've included the plot of one model that used the Multi-layer Perception policy, and the second model that used a residual network (Convolution Neural Network) policy. Before performing analysis of the models that we trained, we hoped the average reward accumulated by the agent using the residual network would've outperformed the agent that didn't. So the next thing we have to explore is how to fine-tune this portion of our model so the agent can fully utilize feature detection of the symbols and colors on the doors of various levels. Overall, we believe there's more to be understood about the affects of the hyperparameters e.g. learning rate, gamma (far-sightedness), batch size, and so on because our model was having trouble making progress by moving through the doors. We also need to increase the number of timesteps to train the models even longer.
+
+![MLP and CNN Policy Models](https://github.com/user-attachments/assets/a51570ce-e213-4a55-89cd-79edc50da0e9)
 
 ### Qualitative Analysis
 Our agent in all different algorithms often struggles to make it past the first floor. It is jumping in every direction and many times get's stuck in corners or loops. This is something that needs to be directly addressed and has been our biggest issue. In all of our runs, the agent has yet to reach the second floor due to it's difficulty in navigating the environment.
