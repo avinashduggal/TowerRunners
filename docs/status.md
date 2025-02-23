@@ -48,33 +48,25 @@ We plot performance graphs to illustrate the learning curve of different RL mode
 
 ## Remaining Goals and Challenges
 ### End of Quarter Goals
-- Fine-tuning the Reward Function: Experiment with reward shaping to guide better decision-making.
 
-- Implementing Curriculum Learning: Gradually increase complexity to ease training.
-
-- Comparing with Human Performance: Use a baseline comparison to evaluate model efficiency.
-
-- Training with Different Seeds: Ensure robustness by evaluating the agent’s adaptability to unseen conditions.
+Some ways that we believe our prototype is limited is its accuracy and its ability to showcase that its behaving "intelligently" throughout the process of training. I believe some contributing factors to this is the amount of time that the model spends training, the reward function it utilizes to guide decision making, and the lack of time it spends exploring its environment. As a result, some goals that we have in mind for the remainder for the remainder of the quarter is to fine-tune the reward function that our agent uses by increasing the complexity of how it determines the agent should be rewarded for its actions. It would also be more realistic if we randomized the seeds while training to ensure the agent is capable of adapting to conditions that it hasn't encountered before, thus it's not overfitting to the same environment and floors that it trains on. We're also hoping to continue learning about the affects of the hyperparameters of the model we're using from stable-baselines3 and playing around with them to achieve higher average rewards. We're certainly going to explore other algorithms to understand to serve as a means of comparison. We'd hope to analyze the components of the algorithms we're currently using and future ones so see how different implementations alters the way the agent is trying to complete the task.
 
 ### Anticipated Challenges
 
-- Exploration vs. Exploitation Trade-off: Ensuring the agent efficiently explores new strategies while retaining learned ones.
-
-- Sparse Rewards: Addressing the challenge of long-term dependencies in credit assignment.
-
-- Computational Constraints: Reinforcement learning requires significant training time, so optimizing resources is crucial.
+So far, challenges we believe we'll be facing throughout by the time of the final report is ensuring we're allocating the right resources to the methods we're using. We also need to find the right balance of making somewhat quick decisions and making the sacrifice of taking actions that seem unfavorable in the short-run, but actually benefitting it in traversing through the rooms and floors. As mentioned earlier, we want to work in a direction where our data is suggesting our model is performly well, but overfits to the seeds that we train it on. Resultingly, it would affect the way the model can generalize to new scenarios. Since we're also in the process of designing a reward function, we're worried that a poor reward function will create unintended behavior, so this is more so on the top of the list of worries compared to fine-tuning hyperparameters. Another concern we have is the complexity of the methods we're using because it may lead to long periods of training. This depends on factors that we've mentioned already, but it would give us less time to work on other things if we our model can't train in a reasonable amount of time. When it comes to developing our own reward function and changing hyperparameters, we will definitely be utilizing office hours to consult the individuals that are more knowledgeable in these areas. It would save us a lot of time if we have a better idea of the direction we should be working towards.
 
 ### Resources Used
-- In the early stages of development, we read the Unity documentation for Obstacle Towers on the public repository to help us set up the environment.
-  
-- Since the code base for Obstacle Towers was deprecated, we struggled alot with version conflicts when installing dependencies. We had to look at the official documentation for various packages like stable-baselines3, numpy, mlagents, etc. to see which versions were compatible with one another. 
-  
-- To help with the agent's task of differentiating between the colors of the doors to climb the floors, we did research on how to incoporate computer vision to train our model. Eventually, we found a model that uses a convolutional neural network on PyTorch called ResNet. As a team, we weren't familiar with computer vision or CNN, so we utilized ChatGPT to guide us through the process.
+In the early stages of development, we read the Unity documentation for Obstacle Towers on the public repository to help us set up the environment. It required some set up in the beginning by downloading the necessary packages and playing around with the examples to ensure everything was working as intended.
+
+Since the code base for Obstacle Towers was deprecated, we struggled alot with version conflicts when installing dependencies. We had to look at the official documentation for various packages like stable-baselines3, numpy, mlagents, etc. to see which versions were compatible with one another. There were instances where we had to downgrade to lower versions because higher versions couldn't support the old packages used by the repository.
+
+To help with the agent's task of differentiating between the colors of the doors to climb the floors, we did research on how to add this level of complexity of incoporating computer vision to train our model. But as a team, we weren't familiar with computer vision or convultional neural networks, so we utilized ChatGPT to guide us through the process. It suggested a method called residual networks (ResNet), so we did some research about the advantages that it provides, and we learned there's an issue with vanishing gradients. During optimization, if it's unable to make proper updates to the parameters of the model, then it'll have a difficult time training. Additionally, we were able to find a ResNet model through PyTorch and we read through the documentation on how to set it up.
   
 - [Obstacle Tower GitHub Repository](https://github.com/Unity-Technologies/obstacle-tower-env)
 - [Obstacle Tower: A Generalization Challenge in Vision, Control, and Planning](https://arxiv.org/abs/1902.01378)
 - [PPO Dash: Improving Generalization in Deep Reinforcement Learning](https://arxiv.org/abs/1907.06704)
 - [Trying to navigate in the Obstacle Tower environment with Reinforcement Learning](https://smartcat.io/tech-blog/data-science/trying-to-navigate-in-the-obstacle-tower-environment-with-reinforcement-learning/)
+- [ResNet Deep Learning: PyTorch Documentation](https://pytorch.org/vision/main/models/resnet.html)
   
 ## Video Summary
 
