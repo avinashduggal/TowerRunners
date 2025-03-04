@@ -1,0 +1,6 @@
+_XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
+Found path: /data/class/cs175/wongp5/TowerRunners/Project/./ObstacleTower/obstacletower.x86_64
+INFO:mlagents_envs.environment:Connected to Unity environment with package version 1.2.0-preview and communication version 1.0.0
+INFO:mlagents_envs.environment:Connected new brain:
+ObstacleTowerAgent-v4.1?team=0
+INFO:gym_unity:1 agents within environment.

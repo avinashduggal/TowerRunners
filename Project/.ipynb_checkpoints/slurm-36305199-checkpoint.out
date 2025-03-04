@@ -1,0 +1,5 @@
+_XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
+Traceback (most recent call last):
+  File "train_rl.py", line 17, in <module>
+    env = ObstacleTowerEnv('./ObstacleTower/obstacletower', retro=True, realtime_mode=False, docker_training=True)
+TypeError: __init__() got an unexpected keyword argument 'docker_training'

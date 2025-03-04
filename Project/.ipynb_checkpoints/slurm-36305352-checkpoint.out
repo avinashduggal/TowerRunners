@@ -1,0 +1,29 @@
+_XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1741057891.332892 1555001 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+Found path: /data/class/cs175/wongp5/TowerRunners/Project/./ObstacleTower/obstacletower.x86_64
+INFO:mlagents_envs.environment:Connected to Unity environment with package version 1.2.0-preview and communication version 1.0.0
+INFO:mlagents_envs.environment:Connected new brain:
+ObstacleTowerAgent-v4.1?team=0
+/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/rpc_utils.py:208: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  dtype=np.bool,
+Traceback (most recent call last):
+  File "train_rl.py", line 17, in <module>
+    env = ObstacleTowerEnv('./ObstacleTower/obstacletower', retro=True, realtime_mode=False)
+  File "/data/class/cs175/wongp5/TowerRunners/Project/obstacle_tower_env.py", line 83, in __init__
+    self._env.reset()
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/environment.py", line 291, in reset
+    self._update_state(rl_output)
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/environment.py", line 274, in _update_state
+    self._env_state[brain_name] = steps_from_proto(
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/rpc_utils.py", line 208, in steps_from_proto
+    dtype=np.bool,
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+INFO:mlagents_envs.environment:Environment shut down with return code 0.

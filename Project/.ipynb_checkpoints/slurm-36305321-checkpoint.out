@@ -1,0 +1,24 @@
+_XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1741057649.447353 1554500 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+Traceback (most recent call last):
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/env_utils.py", line 93, in launch_executable
+    return subprocess.Popen(
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/subprocess.py", line 1720, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/data/class/cs175/wongp5/TowerRunners/Project/./ObstacleTower/obstacletower.x86_64'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train_rl.py", line 17, in <module>
+    env = ObstacleTowerEnv('./ObstacleTower/obstacletower', retro=True, realtime_mode=False)
+  File "/data/class/cs175/wongp5/TowerRunners/Project/obstacle_tower_env.py", line 70, in __init__
+    self._env = UnityEnvironment(
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/environment.py", line 191, in __init__
+    self._proc1 = env_utils.launch_executable(
+  File "/data/class/cs175/wongp5/.conda/envs/obstacle-tower/lib/python3.8/site-packages/mlagents_envs/env_utils.py", line 104, in launch_executable
+    raise UnityEnvironmentException(
+mlagents_envs.exception.UnityEnvironmentException: Error when trying to launch environment - make sure permissions are set correctly. For example "chmod -R 755 /data/class/cs175/wongp5/TowerRunners/Project/./ObstacleTower/obstacletower.x86_64"
