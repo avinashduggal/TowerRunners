@@ -8,7 +8,4 @@
 #SBATCH --cpus-per-task 8    ## Number of CPU cores
 #SBATCH --gres=gpu:V100:1     ## Type and the number of GPUs
 
-Xvfb :1 -screen 0 1024x768x24 & # Create virtual display so the remote machine can run the python script
-export DISPLAY=:1               # Redirect Unity to the virtual screen created
-
-python train_rl.py
+xvfb-run python train_rl.py
