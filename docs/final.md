@@ -7,6 +7,8 @@ title: Final Report
 ## Project Summary
 Our team, Tower Runners, worked on developing a reinforcement learning agent to navigate through the Obstacle Towers environment. Obstacle Towers was a game built for an AI and machine learning competition to benchmark the capabilities of the participant's agents. These capabilities include being able to solve intricate puzzles, path finding in an environment with few yet sparse rewards, computer vision, and determining how to balance exploration and exploitation. Within the Obstacle Tower itself, the agent is tasked with the overarching goal of ascending to the highest floor possible within a predetermined amount of time. This task is comprised of navigating through the rooms, collecting keys or solving puzzles to unlock doors (when necessary), and ascending to higher floors, where difficulty increases as the agent reaches higher floors.
 
+The difficulty of the task primarily lies within the nature of sparse rewards and the agent's ability to make generalizations in a randomly generated environment. In reinforcement learning, agents are rewarded for behavior that lead to ideal states and outcomes, and are penalized for the opposite. It's crucial to be able
+
 ## Approach
 A baseline model that used to benchmark the other methods we planned to use was by using a Random Policy to sample moves to our agent. This model omitted the need for training because it would continuously decide on random actions to take until the end of each episode. 
 
