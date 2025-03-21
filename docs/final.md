@@ -9,7 +9,7 @@ Our team, Tower Runners, worked on developing a reinforcement learning agent to 
 
 The difficulty of the task primarily lies within the nature of sparse rewards and the agent's ability to make generalizations in a randomly generated environment. In reinforcement learning, agents are rewarded for behavior that lead to ideal states and outcomes, and are penalized for the opposite. It's crucial an RL agent to receive the necessary feedback to determine what's acceptable behavior in order for it to complete its task while maximizing rewards simultaneously. As previously mentioned, an agent in Obstacle Tower is operating under a sparse reward environment and it's not 100% clear the actions it should take to navigate to a door because there may be moving obstacles in its way. It will have a difficult time assessing when a door requires a key to be unlocked (on top of identifying the key), and figuring how to solve a puzzle as well.
 
-## Approach
+## Approaches
 A baseline model that used to benchmark the other methods we planned to use was by using a Random Policy to sample moves to our agent. This model omitted the need for training because it would continuously decide on random actions to take until the end of each episode. 
 
 Mention PPO, PPO with rewards (sprase and dense rewards), and Rainbow models. Include the reasons for why we decided to use these models and implemented changes to the environment. What was the objective and how would using these methods help us in completing our task.
