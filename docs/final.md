@@ -58,6 +58,8 @@ After setting up PPO with rewards, although slow, we did see a great jump in the
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/0a64e36c-a5a3-48e4-abf8-b2e3317945f4" />
 
 **Rainbow DQN**
+
+
 We logged average episode rewards and Q-values at regular intervals (every 100,000 timesteps), and periodically saved intermediate models (every 6 hours) for further evaluation and demonstration.
 
 The training was conducted for 5 million timesteps. Models were evaluated both quantitatively (by measuring average reward and Q-values) and qualitatively (through visual inspection of recorded agent runs). The training environment used sparse rewards, and the agent received feedback primarily upon clearing floors and completing key tasks.
