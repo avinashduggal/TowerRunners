@@ -57,12 +57,25 @@ After setting up PPO with rewards, although slow, we did see a great jump in the
 
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/0a64e36c-a5a3-48e4-abf8-b2e3317945f4" />
 
-Add in quantitative evaluation info for Rainbow DQN
+**Rainbow DQN**
+We logged average episode rewards and Q-values at regular intervals (every 100,000 timesteps), and periodically saved intermediate models (every 6 hours) for further evaluation and demonstration.
+
+The training was conducted for 5 million timesteps. Models were evaluated both quantitatively (by measuring average reward and Q-values) and qualitatively (through visual inspection of recorded agent runs). The training environment used sparse rewards, and the agent received feedback primarily upon clearing floors and completing key tasks.
 
 <img width="752" alt="image" src="https://github.com/user-attachments/assets/1fbe5c7a-0201-4b91-899f-54cc9bd4c09c" />
 
 <img width="758" alt="image" src="https://github.com/user-attachments/assets/2a84bc62-7196-4efa-845e-0a0094a9bc49" />
 
+
+Initially, the agent struggled to make progress, with average rewards remaining close to zero for the first 1.5 million timesteps. This was expected due to the sparse reward structure of the environment. However, a notable breakthrough occurred at around 1.5 million timesteps, where the agent's average reward began to increase, reaching 0.80 at 1.7M and 1.30 at 2.0M timesteps. This suggests that the agent successfully explored its environment and learned effective policies for clearing early floors.
+
+From 3 million timesteps onward, we observed a steady climb in performance, with rewards surpassing 3.0 by 3M and 5.0 by 3.4M timesteps. The agent consistently achieved average rewards above 7.0 after 4M timesteps, with a peak recorded at 8.87 at 4.5M timesteps. This performance translates to the agent reliably climbing 6 floors or more per episode.
+
+The Q-values serve as a proxy for the agent's estimated future rewards. Initially, Q-values were low (~0.07), indicating uncertainty and lack of knowledge about the environment. After the agent's reward breakthrough, we observed a corresponding rise in Q-values. From 1.5M to 2.0M timesteps, Q-values increased from 0.11 to 0.23. By 4.5M, Q-values stabilized around 0.55 to 0.57, indicating the agent's increased confidence in its action-value estimates and suggesting convergence of learning.
+
+The alignment between the rising average rewards and Q-values strongly suggests that the agent developed a meaningful policy for navigating the environment and achieving consistent progress. The breakthrough around 1.5M timesteps highlights the importance of exploration in environments with sparse rewards. Once the agent discovered reliable strategies for completing floors, its learning accelerated, reflected in the steep increase in both rewards and Q-values.
+
+Our Rainbow DQN implementation demonstrates a substantial improvement over our initial PPO baseline, which failed to clear even a single floor consistently. Through a combination of prioritized replay, multi-step learning, and noisy networks, our Rainbow DQN agent learned to tackle the exploration problem of Obstacle Tower. The final agent achieved an average reward of 8.87, translating to 6 floors cleared on average, with peak runs exceeding this.
 
 ### Qualitative Analysis
 
@@ -76,7 +89,7 @@ There are occasions where the agent paths towards the door but doesn't fully go 
 
 In newer runs with PPO policy with rewards, and the Rainbow DQN models, the agent had learned to quickly go through floors. Using real-time replay, we were able to see the PPO with rewards model trek its way up through the floors and going through different rooms in the current floor to reach the next, showing that it was getting smarter. Although the PPO model had an average reward mean of almost 2 towards 2 million timesteps, we believe this model could go even further given more training time.
 
-The Rainbow DQN model greatly excelled, as we trained in HPC3, we were able to extract a video in lower quality (as that is the low-quality environment we had ran it on the server because we were no longer doing it locally), and in this video, we saw the agent speed through floors 0-7, where it got stuck on floor 8 because the door was locked and it had not learned to go out of its path to pick up a key. Prior to this, keys to the doors that required them were layed upon in the path of the agent, so the agent never learned to explicitly go out of its way to collect those keys. Once again this agent was cut short, as it was scheduled to run 15 million timesteps, but only ran 5 million before it was shut down due to HCP3 issues. We believe the agent could have gotten to much higher floors if it was able to continue on its training.
+The Rainbow DQN model greatly excelled, as we trained in HPC3, we were able to extract a couple of demo videos in lower quality (as that is the low-quality environment we had ran it on the server because we were no longer doing it locally), and in one of this video, we saw the agent speed through floors 0-7, where it got stuck on floor 8 because the door was locked and it had not learned to go out of its path to pick up a key. Prior to this, keys to the doors that required them were layed upon in the path of the agent, so the agent never learned to explicitly go out of its way to collect those keys. Once again this agent was cut short, as it was scheduled to run 50 million timesteps, but only ran 5 million before it was shut down due to HCP3 issues. Given the promising results within this truncated training window, further experimentation with extended timesteps remains a critical future direction. Extended experimentation with longer training runs and enhanced exploration strategies may enable the agent to develop more sophisticated behaviors, such as backtracking for keys or handling more complex room layouts, potentially allowing it to climb even higher in the Obstacle Tower environment.
 
 Visualization of Agent Behavior: Screenshots and videos show how the agent learns better strategies over time.
 
