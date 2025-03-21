@@ -34,6 +34,9 @@ A method we used to train our reinforcement learning model was using the Proxima
 The idea came from most of the map is quite dull, except the doors which are bright colors, whether yellow, green, or red. The observation space is 84 x 84 x 3, with the 3 being color as it's in RGB, so the plan was to train the model using computer vision to help it go towards the vibrant doors. Initially, we hoped the model would the computer vision to help make better decisions. We were planning to implement ResNet, a CNN from torch, however these plans ended up backfiring as it took way too long to train the model and was completely unfeasible with what we were trying to achieve.
 
 ### Rainbow DQN
+We moved to use the Rainbow Deep Q-Network (Rainbow DQN). Rainbow DQN integrates six major improvements over the standard DQN algorithm, each addressing key limitations commonly encountered in complex reinforcement learning tasks. Specifically, Double DQN reduces the overestimation bias in value predictions, leading to more stable learning. Prioritized Experience Replay enables the agent to focus on rare and valuable experiences, such as collecting keys and reaching new floors, which is crucial in sparse reward settings. The Dueling Network Architecture helps the agent differentiate between the value of being in a particular state (e.g., standing near a door) and the advantage of taking specific actions from that state. Multi-step learning accelerates reward propagation across time steps, allowing the agent to more effectively associate delayed rewards with earlier actions. Distributional RL models the entire distribution of possible future returns rather than a single expected value, improving the agent’s ability to manage the uncertainty inherent in Obstacle Tower’s randomized layouts. Finally, Noisy Networks introduce parameterized exploration directly into the network, enabling more efficient and directed exploration without relying on ε-greedy strategies. Together, these components make Rainbow DQN well-suited for mastering the Obstacle Tower, as it balances exploration and exploitation while efficiently learning from sparse and delayed feedback in a highly dynamic environment.
+
+
 
 ## Evaluation
 We are able to run and test different algorithms in our model to see how they perform, so the environment does run correctly, albeit takes an immensely large amount of time to run. Our evaluation consists of quantitative and qualitative metrics:
@@ -88,6 +91,7 @@ We plot performance graphs to illustrate the learning curve of different RL mode
 - [Trying to navigate in the Obstacle Tower environment with Reinforcement Learning](https://smartcat.io/tech-blog/data-science/trying-to-navigate-in-the-obstacle-tower-environment-with-reinforcement-learning/)
 - [ResNet Deep Learning: PyTorch Documentation](https://pytorch.org/vision/main/models/resnet.html)
 - [Reinforcement Learning in Practice – Obstacle Tower Challenge](https://neurosys.com/blog/reinforcement-learning-obstacle-tower-challenge-2)
+- [Rainbow: Combining Improvements in Deep Reinforcement Learning](https://github.com/Kaixhin/Rainbow)
 
 ## AI Tool Usage
 We used AI Tools such as ChatGPT to help debug the code we had written, along with understanding new concepts we did not understand such as the Rainbow DQN, and how different hyperparameters affected the training of the models.
