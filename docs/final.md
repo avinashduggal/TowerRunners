@@ -4,8 +4,6 @@ title: Final Report
 ---
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZI62ny0AzuY?si=MT-gSF_w2Trei2UA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 [![TowerRunners - Obstacle Tower Final Demo](https://img.youtube.com/vi/ZI62ny0AzuY/0.jpg)](https://www.youtube.com/watch?v=ZI62ny0AzuY)
 
 ## Project Summary
