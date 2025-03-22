@@ -87,6 +87,8 @@ Among the earlier models that we trained using the algorithms that we've describ
 There are occasions where the agent paths towards the door but doesn't fully go through and is walking back and forth. While we were experimenting with our methods, we were hoping the agent would consistently make its way to the doors, but it's repeated the same mistakes. After some period of time the agent even walks away from the door and ends up in the opposite side of the room. 
 
 ![example_agent_paths_to_door](https://github.com/user-attachments/assets/08b7196a-4a1d-41c0-b2a0-7c530c1a41f1)
+![Training Graphs](https://github.com/user-attachments/assets/3340f68f-2bdc-424b-8742-7c3d39ae9eb6)
+![Training Legend](https://github.com/user-attachments/assets/b398a9b0-8ef4-4a9c-97e2-629a46b029cc)
 
 In newer runs with PPO policy with rewards, and the Rainbow DQN models, the agent had learned to quickly go through floors. Using real-time replay, we were able to see the PPO with rewards model trek its way up through the floors and going through different rooms in the current floor to reach the next, showing that it was getting smarter. Although the PPO model had an average reward mean of almost 2 towards 2 million timesteps, we believe this model could go even further given more training time.
 
