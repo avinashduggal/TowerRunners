@@ -6,6 +6,8 @@ title: Final Report
 ## Video
 [![TowerRunners - Obstacle Tower Final Demo](https://img.youtube.com/vi/ZI62ny0AzuY/0.jpg)](https://www.youtube.com/watch?v=ZI62ny0AzuY)
 
+### [Full Video](https://www.youtube.com/watch?v=ZI62ny0AzuY)
+
 ## Project Summary
 Our team, Tower Runners, worked on developing a reinforcement learning agent to navigate through the Obstacle Towers environment. Obstacle Towers was a game built for an AI and machine learning competition to benchmark the capabilities of the participant's agents. These capabilities include being able to solve intricate puzzles, path finding in an environment with few yet sparse rewards, computer vision, and determining how to balance exploration and exploitation. Within the Obstacle Tower itself, the agent is tasked with the overarching goal of ascending to the highest floor possible within a predetermined amount of time. This task is comprised of navigating through the rooms, collecting keys or solving puzzles to unlock doors (when necessary), and ascending to higher floors, where difficulty increases as the agent reaches higher floors.
 
