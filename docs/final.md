@@ -51,11 +51,11 @@ Generalization Performance: Tested by training on seeds/towers and evaluating on
 In order to measure the performance of our RL agent using the Proximal Policy Optimization model, we ran several training sessions and recorded the average reward that it accumulated over time. Below, we've included the plot of one model that used the Multi-layer Perception policy, and the second model that used a residual network (Convolution Neural Network) policy. Before performing analysis of the models that we trained, we hoped the average reward accumulated by the agent using the residual network would've outperformed the agent that didn't. The original model that's barebones using only PPO obtained higher mean rewards and it also increased throughout it's training process. So the next thing we have to explore is how to fine-tune this portion of our model so the agent can fully utilize feature detection of the symbols and colors on the doors of various levels. Overall, we believe there's more to be understood about the affects of the hyperparameters e.g. learning rate, gamma (far-sightedness), batch size, and so on because our model was having trouble making progress by moving through the doors. We also need to increase the number of timesteps to train the models even longer.
 
 ![MLP and CNN Policy Models](https://github.com/user-attachments/assets/a51570ce-e213-4a55-89cd-79edc50da0e9)
-![Training Graphs](https://github.com/user-attachments/assets/3340f68f-2bdc-424b-8742-7c3d39ae9eb6)
-![Training Legend](https://github.com/user-attachments/assets/b398a9b0-8ef4-4a9c-97e2-629a46b029cc)
 
 After setting up PPO with rewards, although slow, we did see a great jump in the average episode reward. Instead of remaining below 1, signifying the agent was often stuck trying to get up to the 1st floor from floor 0, the agent was now averaging well above 1, and for a short period of time around 1.5 million timesteps, it was averaging above 2. This shows that the agent was consistently getting to the 2nd floor, and gained even more rewards after that. This means that the agent was gaining rewards from the 2nd floor completing puzzles, or it was occasionally make it to the 3rd floor as well.
 
+![Training Graphs](https://github.com/user-attachments/assets/3340f68f-2bdc-424b-8742-7c3d39ae9eb6)
+![Training Legend](https://github.com/user-attachments/assets/b398a9b0-8ef4-4a9c-97e2-629a46b029cc)
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/0a64e36c-a5a3-48e4-abf8-b2e3317945f4" />
 
 **Rainbow DQN**
