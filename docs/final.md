@@ -54,8 +54,6 @@ In order to measure the performance of our RL agent using the Proximal Policy Op
 
 After setting up PPO with rewards, although slow, we did see a great jump in the average episode reward. Instead of remaining below 1, signifying the agent was often stuck trying to get up to the 1st floor from floor 0, the agent was now averaging well above 1, and for a short period of time around 1.5 million timesteps, it was averaging above 2. This shows that the agent was consistently getting to the 2nd floor, and gained even more rewards after that. This means that the agent was gaining rewards from the 2nd floor completing puzzles, or it was occasionally make it to the 3rd floor as well.
 
-![Training Graphs](https://github.com/user-attachments/assets/3340f68f-2bdc-424b-8742-7c3d39ae9eb6)
-![Training Legend](https://github.com/user-attachments/assets/b398a9b0-8ef4-4a9c-97e2-629a46b029cc)
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/0a64e36c-a5a3-48e4-abf8-b2e3317945f4" />
 
 **Rainbow DQN**
